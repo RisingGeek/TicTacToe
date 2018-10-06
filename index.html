@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/angular.min.js"></script>
+    <script src="assets/JS/app.js"></script>
+    <script src="assets/JS/buttonClass.js"></script>
+    <script src="assets/JS/logic.js"></script>
+    <script src="assets/JS/model.js"></script>
+    <script src="assets/JS/controller.js"></script>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="myctrl" class="container-fluid text-center tic p-4">
+        <h1 class="text-center pb-4">Tic Tac Toe</h1>
+        <h3 class="pb-3">{{player}}</h3>
+        <table class="mx-auto">
+            <tr>
+                <td ng-repeat="loop in [1,2,3]">
+                    <button class="fa {{buttons[loop-1].value}}" ng-click="updatePos(loop)"></button>
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="loop in [4,5,6]">
+                    <button class="fa {{buttons[loop-1].value}}" ng-click="updatePos(loop)"></button>
+                </td>
+            </tr>
+            <tr>
+                <td ng-repeat="loop in [7,8,9]">
+                    <button class="fa {{buttons[loop-1].value}}" ng-click="updatePos(loop)"></button>
+                </td>
+            </tr>
+        </table>
+        <h2 class="p-3">{{wins}}</h2>
+        <button class="btn btn-success btn-lg" ng-click="restart()">Restart</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body {
+    color: white;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+}
+td button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+td button:focus {
+    outline: none;
+}
+.fa {
+    color: white;
+    font-size: 40px;
+}
+.fa-times {
+    color: aqua;
+}
+.fa-circle-o {
+    color: lightgray;
+}
+td:first-child, td:nth-child(2) {
+    border-right: 5px solid white;
+}
+tr:nth-child(1), tr:nth-child(2) {
+    border-bottom: 5px solid white;
+}

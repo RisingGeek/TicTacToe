@@ -7,7 +7,7 @@ const myObj = {
         }
     },
     show(position) {
-        if(this.buttons[position-1].value)
+        if(this.buttons[position-1].value || this.gameOver())
             return;
         this.state=this.buttons[position-1].toggle(this.state);
     },
